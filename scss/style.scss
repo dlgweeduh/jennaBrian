@@ -205,17 +205,17 @@ Single slide style
 
 	li:first-of-type {
 		background-color: $color-1;
-	 	background-image: url('../assets/jb6.jpg');		
+	 	background-image: url('../assets/jb5.jpg');		
 	}
 
 	li:nth-of-type(2) {
 	 	background-color: lighten($color-1, 8%);
-	 	// background-image: url('../assets/jb6.jpg');
+	 	// background-image: url('../assets/jb1.jpg');
 	}
 
 	li:nth-of-type(3) {
 	 	background-color: lighten($color-1, 20%);
-	 	// background-image: url('../assets/jb1.jpg');
+	 	background-image: url('../assets/jb1.jpg');
 	}
 
 	li:nth-of-type(4) {
@@ -264,7 +264,6 @@ Single slide style
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-
 		video {
 			/* you won't see this element in the html, but it will be injected using js */
 			display: block;
@@ -281,7 +280,7 @@ Single slide style
 	h2, p {
 		text-shadow: 0 1px 3px rgba(#000, .1);
 		line-height: 1.2;
-		margin: 0 auto 14px;
+		margin: 0 auto 50px;
 		color: $color-3;
 		width: 90%;
 		max-width: 400px;
@@ -342,7 +341,7 @@ Single slide style
 
 		.cd-full-width, 
 		.cd-half-width {
-			padding-top: 150px;
+			padding-top: 100px;
 		}
 
 		.cd-bg-video-wrapper {
@@ -371,12 +370,14 @@ Single slide style
 		}
 
 		h2 {
-			font-size: 2.4em;
+			font-size: 3.4em;
+			background: rgba(0,0,0,0.3);
+			padding: 10px;
 			font-weight: 300;
 		}
 
 		.cd-btn {
-			font-size: 1.4rem;
+			font-size: 1.8rem;
 		}
 	}
 
@@ -630,7 +631,7 @@ Slider navigation
 		}
 
 		a {
-			padding-top: 48px;
+			padding: 48px 10px 0 10px;
 			font-size: 1.1rem;
 			text-transform: uppercase;
 
