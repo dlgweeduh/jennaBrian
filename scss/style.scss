@@ -26,7 +26,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
-	background-color: darken($color-3, 5%);
+	background-color: #425371 !important;
 }
 
 a {
@@ -44,7 +44,7 @@ Main Components
 
 -------------------------------- */
 
-.cd-header {
+.header {
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -60,7 +60,7 @@ Main Components
 	}
 }
 
-#cd-logo {
+#logo {
 	float: left;
 	margin: 13px 0 0 5%;
 
@@ -73,13 +73,13 @@ Main Components
 	}
 }
 
-.cd-primary-nav {
+.primary-nav {
 	/* mobile first - navigation hidden by default, triggered by tap/click on navigation icon */
 	float: right;
 	margin-right: 5%;
 	width: 44px;
 	height: 100%;
-	background: url('../assets/cd-icon-menu.svg') no-repeat center center;
+	background: url('../assets/icon-menu.svg') no-repeat center center;
 
 	ul {
 		position: absolute;
@@ -144,12 +144,12 @@ Slider
 
 -------------------------------- */
 
-.cd-hero {
+.hero {
 	position: relative;
 	@include font-smoothing;
 }
 
-.cd-hero-slider {
+.hero-slider {
 	position: relative;
 	height: $intro-height-S;
 	overflow: hidden;
@@ -195,7 +195,7 @@ Single slide style
 
 -------------------------------- */
 
-.cd-hero-slider {
+.hero-slider {
 
 	li {
 		background-position: center center;
@@ -210,7 +210,7 @@ Single slide style
 
 	li:nth-of-type(2) {
 	 	background-color: lighten($color-1, 8%);
-	 	// background-image: url('../assets/jb1.jpg');
+	 	background-image: url('../assets/jb2.jpg');
 	}
 
 	li:nth-of-type(3) {
@@ -225,11 +225,11 @@ Single slide style
 
 	li:nth-of-type(5) {
 	 	background-color: $color-1;
-	 	// background-image: url('../assets/jb6.jpg');
+	 	background-image: url('../assets/jb8.jpg');
 	}
 
-	.cd-full-width, 
-	.cd-half-width {
+	.full-width, 
+	.half-width {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -245,7 +245,7 @@ Single slide style
 		@include transform(translateZ(0));
 	}
 
-	.cd-img-container {
+	.img-container {
 		/* hide image on mobile device */
 		display: none;
 
@@ -255,7 +255,7 @@ Single slide style
 		}
 	}
 
-	.cd-bg-video-wrapper {
+	.bg-video-wrapper {
 		/* hide video on mobile device */
 		display: none;
 		position: absolute;
@@ -295,7 +295,7 @@ Single slide style
 		line-height: 1.4;
 	}
 
-	.cd-btn {
+	.btn {
 		display: inline-block;
 		padding: 1.2em 1.4em;
 		margin-top: .8em;
@@ -339,16 +339,16 @@ Single slide style
 		 	
 		}
 
-		.cd-full-width, 
-		.cd-half-width {
+		.full-width, 
+		.half-width {
 			padding-top: 100px;
 		}
 
-		.cd-bg-video-wrapper {
+		.bg-video-wrapper {
 			display: block;
 		}
 
-		.cd-half-width {
+		.half-width {
 			width: 45%;
 
 			&:first-of-type {
@@ -361,7 +361,7 @@ Single slide style
 			}
 		}
 
-		.cd-img-container {
+		.img-container {
 			display: block;
 		}
 
@@ -376,15 +376,15 @@ Single slide style
 			font-weight: 300;
 		}
 
-		.cd-btn {
+		.btn {
 			font-size: 1.8rem;
 		}
 	}
 
 	@include MQ(L) {
 
-		.cd-full-width, 
-		.cd-half-width {
+		.full-width, 
+		.half-width {
 			padding-top: 220px;
 		}
 
@@ -409,66 +409,66 @@ Single slide animation
 -------------------------------- */
 
 @include MQ(M) {
-	.cd-hero-slider {
+	.hero-slider {
 		
-		.cd-half-width {
+		.half-width {
 			opacity: 0;
 			@include transform(translateX(40px));
 		}
 
-		.move-left .cd-half-width {
+		.move-left .half-width {
 			@include transform(translateX(-40px));
 		}
 
-		.selected .cd-half-width {
+		.selected .half-width {
 			/* this is the visible slide */
 			opacity: 1;
 			@include transform(translateX(0));
 		}
 		
-		.is-moving .cd-half-width {
+		.is-moving .half-width {
 			/* this is the slide moving outside the viewport 
 			wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
 			@include transition(opacity 0s .5s, transform 0s .5s);
 		}
 
-		li.selected.from-left .cd-half-width:nth-of-type(2),
-		li.selected.from-right .cd-half-width:first-of-type {
+		li.selected.from-left .half-width:nth-of-type(2),
+		li.selected.from-right .half-width:first-of-type {
 			/* this is the selected slide - different animation if it's entering from left or right */
 			@include transition(opacity .4s .2s, transform .5s .2s);
 		}
 
-		li.selected.from-left .cd-half-width:first-of-type,
-		li.selected.from-right .cd-half-width:nth-of-type(2) {
+		li.selected.from-left .half-width:first-of-type,
+		li.selected.from-right .half-width:nth-of-type(2) {
 			/* this is the selected slide - different animation if it's entering from left or right */
 			@include transition(opacity .4s .4s, transform .5s .4s);
 		}
 
-		.cd-full-width h2, 
-		.cd-full-width p,
-		.cd-full-width .cd-btn {
+		.full-width h2, 
+		.full-width p,
+		.full-width .btn {
 			opacity: 0;
 			@include transform(translateX(100px));
 		}
 
-		.move-left .cd-full-width h2, 
-		.move-left .cd-full-width p,
-		.move-left .cd-full-width .cd-btn {
+		.move-left .full-width h2, 
+		.move-left .full-width p,
+		.move-left .full-width .btn {
 			opacity: 0;
 			@include transform(translateX(-100px));
 		}
 
-		.selected .cd-full-width h2, 
-		.selected .cd-full-width p,
-		.selected .cd-full-width .cd-btn {
+		.selected .full-width h2, 
+		.selected .full-width p,
+		.selected .full-width .btn {
 			/* this is the visible slide */
 			opacity: 1;
 			@include transform(translateX(0));
 		}
 
-		li.is-moving .cd-full-width h2, 
-		li.is-moving .cd-full-width p,
-		li.is-moving .cd-full-width .cd-btn {
+		li.is-moving .full-width h2, 
+		li.is-moving .full-width p,
+		li.is-moving .full-width .btn {
 			/* this is the slide moving outside the viewport 
 			wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
 			@include transition(opacity 0s .5s, transform 0s .5s);
@@ -482,7 +482,7 @@ Single slide animation
 			@include transition(opacity .4s .3s, transform .5s .3s);
 		}
 
-		li.selected .cd-btn {
+		li.selected .btn {
 			@include transition(opacity .4s .4s, transform .5s .4s, background-color .2s 0s);
 		}
 	}
@@ -494,7 +494,7 @@ Slider navigation
 
 -------------------------------- */
 
-.cd-slider-nav {
+.slider-nav {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
@@ -512,7 +512,7 @@ Slider navigation
 		position: relative;
 	}
 
-	.cd-marker {
+	.marker {
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -562,8 +562,8 @@ Slider navigation
 		display: block;
 		position: relative;
 		padding-top: 35px;
-		font-size: 1rem;
-		font-weight: 700;
+		font-size: 0.5rem;
+		font-weight: 400;
 		color: lighten($color-1, 50%);
 		@include transition(background-color .2s);
 
@@ -574,7 +574,7 @@ Slider navigation
 			height: 24px;
 			top: 8px;
 			@include center(x);
-			background: url(../assets/cd-icon-navigation.svg) no-repeat 0 0;
+			background: url(../assets/icon-navigation.svg) no-repeat 0 0;
 		}
 
 		.no-touch &:hover {
@@ -625,14 +625,14 @@ Slider navigation
 	@include MQ(M) {
 		height: 80px;
 
-		.cd-marker, 
+		.marker, 
 		li {
 			width: 95px;
 		}
 
 		a {
 			padding: 48px 10px 0 10px;
-			font-size: 1.1rem;
+			font-size: 1.0rem;
 			text-transform: uppercase;
 
 			&::before {
@@ -648,7 +648,7 @@ Main content
 
 -------------------------------- */
 
-.cd-main-content {
+.main-content {
 	width: 90%;
 	max-width: $M;
 	margin: 0 auto;
@@ -675,7 +675,7 @@ Main content
 Javascript disabled
 
 -------------------------------- */
-.no-js .cd-hero-slider li {
+.no-js .hero-slider li {
 	display: none;
 
 	&.selected {
@@ -683,6 +683,6 @@ Javascript disabled
 	}
 }
 
-.no-js .cd-slider-nav {
+.no-js .slider-nav {
 	display: none;
 }

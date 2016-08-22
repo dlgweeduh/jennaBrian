@@ -8,14 +8,20 @@
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/jquery.modal.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<link rel="shortcut icon" href="favicon.ico">
   	
-	<title>Jenna + Brian '15</title>
+	<title>Jenna &amp; Brian</title>
+	<style type="text/css">
+	body {
+		background-color: #425371 !important;
+	}
+	</style>
 </head>
 <body>
-	<header class="cd-header">
-		<!-- <nav class="cd-primary-nav">
+	<header class="header">
+		<!-- <nav class="primary-nav">
 			<ul>
 				<li><a href="#0">Intro Video</a></li>
 				<li><a href="#0">Same-Day Video</a></li>
@@ -25,66 +31,81 @@
 		</nav> --> 
 	</header>
 
-	<section class="cd-hero">
-		<ul class="cd-hero-slider autoplay">
+	<section class="hero">
+		<ul class="hero-slider autoplay">
 			<li class="selected">
-				<div class="cd-full-width">
-					<h2>Jenna &amp; Brian '14</h2>				
-					<a href="#" class="cd-btn secondary">Watch the Intro Video</a>
-				</div> <!-- .cd-full-width -->
+				<div class="full-width">
+					<h2>Jenna &amp; Brian</h2>				
+					<a target="_blank" href="http://sparkedtech.s3.amazonaws.com/Brian&Jenna Intro.mp4" class="btn secondary">Watch the Wedding Video (Intro)</a>
+				</div> <!-- .full-width -->
 			</li>
-			<li class="cd-bg-video">
-				<div class="cd-full-width">
-					<h2>Lorem Ipsum</h2>
-					<a target="_blank" href="http://sparkedtech.s3.amazonaws.com/291559595.mp4" class="cd-btn">Get the Wedding Video</a>
-				</div> <!-- .cd-full-width -->
+			<li class="bg-video">
+				<div class="full-width">
+					<h2>Jenna &amp; Brian</h2>
+					<a target="_blank" href="http://sparkedtech.s3.amazonaws.com/291559595.mp4" class="btn">Get the Same Day Edit</a>
+				</div> <!-- .full-width -->
 
-				<div class="cd-bg-video-wrapper" data-video="http://sparkedtech.s3.amazonaws.com/video2">
+				<div class="bg-video-wrapper" data-video="http://sparkedtech.s3.amazonaws.com/video2">
 					<!-- video element will be loaded using jQuery -->
-				</div> <!-- .cd-bg-video-wrapper -->
+				</div> <!-- .bg-video-wrapper -->
 			</li>
 
 			<li>
-				<div class="cd-half-width">
-					<h2>Lorem Ipsum</h2>
+				<div class="half-width">
+					<h2>Jenna &amp; Brian</h2>
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> -->
-					<a target="_blank" href="https://www.dropbox.com/sh/1jvkijo45avnod4/AAAImA7scNhqc73R3V5NVpLha" class="cd-btn">See the Pictures</a>
-				</div> <!-- .cd-half-width -->
+					<a target="_blank" href="https://www.dropbox.com/sh/uxd73fk0q3vgwfw/AAC0rH8QjbkSitjhDinsU8mBa" class="btn">See the Pictures</a>
+				</div> <!-- .half-width -->
 
-				<!-- <div class="cd-half-width cd-img-container">
+				<!-- <div class="half-width img-container">
 					<img src="assets/jb2.jpg" alt="tech 1">
-				</div> --> <!-- .cd-half-width.cd-img-container -->
+				</div> --> <!-- .half-width.img-container -->
 			</li>
 
-			<li class="cd-bg-video">
-				<div class="cd-full-width">
-					<h2>Brian + Jenna '14</h2>
-					<a target="_blank" href="http://sparkedtech.s3.amazonaws.com/295811980.mp4" class="cd-btn">Get the Slow-Mo Video</a>
-				</div> <!-- .cd-full-width -->
+			<li class="bg-video">
+				<div class="full-width">
+					<h2>Jenna &amp; Brian</h2>
+					<a target="_blank" href="http://sparkedtech.s3.amazonaws.com/295811980.mp4" class="btn">Get the Slow Motion Video</a>
+				</div> <!-- .full-width -->
 
-				<div class="cd-bg-video-wrapper" data-video="http://sparkedtech.s3.amazonaws.com/video">
+				<div class="bg-video-wrapper" data-video="http://sparkedtech.s3.amazonaws.com/video">
 					<!-- video element will be loaded using jQuery -->
-				</div> <!-- .cd-bg-video-wrapper -->
+				</div> <!-- .bg-video-wrapper -->
 			</li>			
+			<li>
+				<div class="half-width">
+					<h2>Coming Soon</h2>
+					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> -->
+					<a href="#ex1" rel="modal:open" target="_blank" class="btn" id="myBtn">Click to find out!</a>
+<!--   <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+ -->
+				</div> <!-- .half-width -->
+			</li>
 
-		</ul> <!-- .cd-hero-slider -->
+		</ul> <!-- .hero-slider -->
 
-		<div class="cd-slider-nav">
+		<div class="slider-nav">
 			<nav>
-				<span class="cd-marker item-1"></span>
+				<span class="marker item-1"></span>
 				
 				<ul>
-					<li class="selected"><a href="#0">Intro Video</a></li>
-					<li><a href="#0">Wedding Video</a></li>
+					<li class="selected"><a href="#0">Wedding Video (Intro)</a></li>
+					<li><a href="#0">Same Day Edit</a></li>
 					<li><a href="#0">Pictures</a></li>
-					<li><a href="#0">Still Frame Video</a></li>
-					<!-- <li><a href="#0">The Fun</a></li> -->
+					<li><a href="#0">Slow Motion Video</a></li>
+					<li><a href="#0">Coming Soon</a></li>
 				</ul>
 			</nav> 
-		</div> <!-- .cd-slider-nav -->
-	</section> <!-- .cd-hero -->
+		</div> <!-- .slider-nav -->
+	</section> <!-- .hero -->
 	
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+  <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+
+ <div id="ex1" style="display:none; text-align: center;">
+    <p> Coming July 2016! <br></br><img style="width: 80%" src="assets/baby.jpg"> <a href="#" rel="modal:close" style="text-align: center; color: #fff" ></a></p>
+  </div>
+
 </body>
 </html>
